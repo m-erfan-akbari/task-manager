@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../../ui/Header";
 import Main from "../../ui/Main";
 import { CalendarX, Kanban, List } from "lucide-react";
@@ -9,15 +9,13 @@ import { useLocalStorageState } from "../../hooks/useLocalStorage";
 import TaskForm from "./TaskForm";
 import Button from "../../ui/Button";
 import { populateTasks } from "../../utils/populateData";
-import SelectController from "../../ui/SelectController";
 import FilterTaskType from "./FilterTaskType";
 
 export default function Task({ users, projects, tasks, setTasks }) {
-  const [currentView, setCurrentView] = useLocalStorageState(2, "taskView");
+  const [currentView, setCurrentView] = useLocalStorageState(1, "taskView");
   const [deleteTask, setDeleteTask] = useState(null);
   const [taskFormModal, setTaskFormModal] = useState(null);
   const [filter, setFilter] = useState({ type: 0 });
-  console.log(filter.type);
 
   const populatedTasks = populateTasks({ tasks, projects, users });
   const sortedTasks = populatedTasks.sort(
@@ -91,7 +89,7 @@ export default function Task({ users, projects, tasks, setTasks }) {
             ))}
           </div>
 
-          <div className="h-[75vh] overflow-y-scroll p-6">
+          <div className="h-[75dvh] overflow-y-scroll p-6 pb-28">
             <CurrentViewComponent
               tasks={filterTaskByType}
               setTaskFormModal={setTaskFormModal}
