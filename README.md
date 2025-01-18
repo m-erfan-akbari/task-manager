@@ -20,8 +20,8 @@ Follow these steps to run the project:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/m-erfan-akbari/task-manager
+   cd ./task-manager
    ```
 
 2. Install dependencies:
