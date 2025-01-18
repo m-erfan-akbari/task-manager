@@ -38,5 +38,5 @@ Follow these steps to run the project:
 
 4. Open your browser and navigate to:
    ```bash
-   http://localhost:3000
+   http://localhost:5173
    ```
